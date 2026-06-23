@@ -1,15 +1,83 @@
 # IHC 2026.1 - Grupo 11
 
-Esta página é o ponto inicial da documentação do projeto.
+Este projeto tem como objetivo o desenvolvimento do projeto de IHC do grupo 11 no semestre de 2026.1
 
-## Como adicionar conteúdo
+## Integrantes
 
-Crie novos arquivos Markdown dentro da pasta `docs/` e adicione as páginas no campo `nav` do arquivo `mkdocs.yml`.
-
-Exemplo:
-
-```yaml
-nav:
-  - Início: index.md
-  - Entrega 1: entrega-1.md
-```
+<div align="center">
+  <table align="center">
+    <tr>
+      <td align="center">
+        <a href="https://github.com/BeatrizSants" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/BeatrizSants.png" width="120px;" alt="Beatriz Figueiredo"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/BeatrizSants" target="_blank" rel="noopener noreferrer">Beatriz Figueiredo</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/enzocostaj" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/enzocostaj.png" width="120px;" alt="Enzo Costa"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/enzocostaj" target="_blank" rel="noopener noreferrer">Enzo Costa</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/IderlanJ" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/IderlanJ.png" width="120px;" alt="Iderlan Junio"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/IderlanJ" target="_blank" rel="noopener noreferrer">Iderlan Junio</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/leticialopes20" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/leticialopes20.png" width="120px;" alt="Leticia Lopes"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/leticialopes20" target="_blank" rel="noopener noreferrer">Leticia Lopes</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/paulocerqr" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/paulocerqr.png" width="120px;" alt="Paulo Cerqueira"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/paulocerqr" target="_blank" rel="noopener noreferrer">Paulo Cerqueira</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Mach1r0" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/Mach1r0.png" width="120px;" alt="Daniel Ferreira"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/Mach1r0" target="_blank" rel="noopener noreferrer">Daniel Ferreira</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/mel14-hub" target="_blank" rel="noopener noreferrer">
+          <img style="border-radius: 50%; border: 3px solid #4CAF50;" src="https://github.com/mel14-hub.png" width="120px;" alt="Lara Souza"/>
+        </a><br />
+        <sub>
+          <b>
+            <a href="https://github.com/mel14-hub" target="_blank" rel="noopener noreferrer">Lara Souza</a>
+          </b>
+        </sub><br/>
+      </td>
+      <td align="center">
+    </tr>
+  </table>
+</div>
