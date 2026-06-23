@@ -1,26 +1,30 @@
-# VerificaAAA
+# IHC 2026.1 - Grupo 11
 
-<div align="center">
-<img src="docs/imagens/logo-verificaaa.png" alt="Logo de prancheta com checklist" style="width: 100px">
-</div>
+Esqueleto de documentação com MkDocs Material e deploy para GitHub Pages.
 
+## Rodar localmente
 
-## Introdução
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+mkdocs serve
+```
 
-Este repositório tem como propósito fornecer um checklist prático de acessibilidade para projetos, principalmente de desenvolvimento de software, que incluem: desenvolvimento web, design, geração de conteúdo e gestão de projetos. 
+Acesse `http://127.0.0.1:8000`.
 
-## VerificaAAA
+## Gerar build
 
-O VerificaAAA é nome do projeto criado a partir do curso de Interação Humano Computador, ministrado pela docente Rejane Maria da Costa Figueiredo, na Universidade de Brasília (UnB). 
+```bash
+mkdocs build --strict
+```
 
-## Contribuidores
+## Deploy
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/vitorfleonardo"><img style="border-radius: 50%;" src="https://github.com/vitorfleonardo.png" width="100px;" alt=""/><br /><sub><b>Vitor Feijó</b></sub></a><br />
-    <td align="center"><a href="https://github.com/CADU110"><img style="border-radius: 50%;" src="https://github.com/CADU110.png" width="100px;" alt=""/><br /><sub><b>Carlos Eduardo</b></sub></a><br />   
-    <td align="center"><a href="https://github.com/Angelicahaas"><img style="border-radius: 50%;" src="https://github.com/Angelicahaas.png" width="100px;" alt=""/><br /><sub><b>Harleny Angéllica</b></sub></a><br />   
-    <td align="center"><a href="https://github.com/Erick-ems "><img style="border-radius: 50%;" src="https://github.com/Erick-ems.png" width="100px;" alt=""/><br /><sub><b>Erick Santos</b></sub></a><br />
-    <td align="center"><a href="https://github.com/maykonjuso "><img style="border-radius: 50%;" src="https://github.com/maykonjuso.png" width="100px;" alt=""/><br /><sub><b>Maykon Júnio</b></sub></a><br />
-  </tr>
-</table>
+O workflow em `.github/workflows/ci.yml` executa o deploy quando houver push na branch `docs`. O MkDocs publica o site gerado na branch `gh-pages`.
+
+No GitHub Pages, use:
+
+- Source: `Deploy from a branch`
+- Branch: `gh-pages`
+- Folder: `/ (root)`

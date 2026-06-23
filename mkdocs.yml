@@ -1,41 +1,41 @@
-repo_url: https://github.com/vitorfleonardo/VerificAAA
-repo_name: VerificAAA
-
-site_url: https://github.com/vitorfleonardo/VerificAAA
-site_name: VerificAAA
-
-use_directory_urls: False
-
-nav:
-  - Início - VerificAAA: 'index.md'
-
-  - Desenvolvimento Web:
-    - Desenvolvimento: 'devWeb/non_text_content.md'
-
-  - Design:
-    - Design: 'design/design.md'
-  
-  - Geração de Conteúdo:
-    - Conteúdo: 'geracaoConteudo/conteudo.md'
-
-  - Gestão de Projetos:
-    - Gestão de Projetos: 'gestaoProjeto/gestaoProjeto.md'
-
-  - Ferramentas:
-    - Ferramentas de Acessibilidade: 'tools/ferramentas.md'
+site_name: IHC 2026.1 - Grupo 11
+site_url: https://unb-ihc.github.io/IHC_2026.1_Grupo11/
+repo_url: https://github.com/UnB-IHC/IHC_2026.1_Grupo11
+repo_name: UnB-IHC/IHC_2026.1_Grupo11
 
 theme:
-  name: readthedocs
-  locale: pt_BR
-  titles_only: true
-  logo: imagens/logo-verificaaa.png
-  favicon: imagens/logo-verificaaa.png
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  language: pt-BR
+  palette:
+    scheme: default
+    primary: indigo
+    accent: orange
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
+    - content.code.copy
+
+nav:
+  - Início: index.md
 
 markdown_extensions:
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: false
-      clickable_checkbox: true
-
-extra_css:
-  - stylesheets/extra.css
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
