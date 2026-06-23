@@ -1,167 +1,47 @@
-<hr>
+### Imagens e Conteúdo Visual
 
-<p>
-Esta seção apresenta diretrizes para criar conteúdos digitais acessíveis, como textos, imagens, descrições, vídeos, áudios, podcasts e publicações em redes sociais.
-É destinada a profissionais de comunicação, marketing, jornalismo, mídias sociais, redação, produção de conteúdo e UX writing.
-</p>
+Imagens de conteúdo devem possuir texto alternativo que transmita a informação relevante da imagem. [[NBR 5.2.1]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-### Por que é importante?
+Imagens funcionais, usadas como botões ou links, devem possuir texto alternativo que descreva a ação ou destino do elemento. [[NBR 5.2.2]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<p>
-A acessibilidade não depende apenas do código: o modo como a informação é escrita e organizada impacta diretamente na compreensão.
-Descrever imagens, usar linguagem clara e oferecer alternativas acessíveis garante que pessoas com deficiência ou baixa alfabetização possam acessar o conteúdo.
-</p>
+Imagens decorativas devem ser ignoradas por tecnologias assistivas, evitando ruído desnecessário para o usuário. [[NBR 5.2.3]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<hr>
+Imagens complexas, como gráficos, diagramas e infográficos, devem possuir descrição detalhada para que o conteúdo seja compreendido sem depender apenas da visão. [[NBR 5.2.4]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<div style="text-align:center; margin-bottom: 20px;">
-    <h3>Progresso Geral</h3>
-    <canvas id="grafico_gestao" width="220" height="220"></canvas>
-</div>
+Imagens de texto devem ser evitadas quando o texto puder ser apresentado diretamente em HTML, permitindo redimensionamento, leitura por tecnologias assistivas e melhor adaptação visual. [[NBR 5.2.5]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<hr>
+---
 
+### Conteúdo Textual e Clareza da Informação
 
-## 1. Termos
-<p>O uso correto da terminologia é essencial para respeito, clareza e precisão semântica.</p>
+O conteúdo textual deve possuir espaçamento adequado entre linhas, parágrafos, letras e palavras, favorecendo a leitura. [[NBR 5.12.1]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR) [[NBR 5.12.2]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR) [[NBR 5.12.3]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR) [[NBR 5.12.4]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Utilização adequada do termo “pessoas com deficiência (PCD)” e especificações como visual, física, múltipla etc.
-  [<a href="#refUK">Guia UK-BR – Cap. Linguagem</a>]
-</label>
+Blocos de texto devem possuir largura adequada, evitando linhas excessivamente longas que prejudiquem a leitura. [[NBR 5.12.6]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<hr>
+A linguagem deve ser clara, objetiva e compatível com o público-alvo, reduzindo esforço cognitivo e aumentando a compreensão. [[NBR 5.12.12]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-## 2. Textos
-<p>Os textos devem ser claros, diretos e estruturados para garantir compreensão por pessoas com diferentes perfis cognitivos.</p>
+Siglas e abreviaturas devem ser explicadas quando necessário, evitando ambiguidade para o usuário. [[NBR 5.12.11]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Uso de linguagem clara, objetiva e não ambígua.
-  [<a href="#refUK">Guia UK-BR – Cap. Linguagem</a>]
-</label>
+---
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Frases com média de 15–20 palavras.
-  [<a href="#refUK">Guia UK-BR – Cap. Linguagem</a>]
-</label>
+### Conteúdo Multimídia, Animações e Tempo
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Preferência por orações em ordem direta (Sujeito + Verbo + Complemento).
-  [<a href="#refUK">Guia UK-BR – Cap. Linguagem</a>]
-</label>
+Vídeos devem possuir legendas descritivas quando apresentarem informações sonoras relevantes. [[NBR 5.14.2]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Termos com significado especial usam marcação semântica adequada.
-  [<a href="#refNBR">NBR 5.12.8</a>]
-  [<a href="#refWCAG1">WCAG 1.3.1</a>]
-</label>
+Vídeos devem possuir audiodescrição quando informações visuais forem necessárias para compreender o conteúdo. [[NBR 5.14.4]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<hr>
+O usuário deve conseguir controlar o áudio de um conteúdo sem depender do volume geral do sistema. [[NBR 5.14.7]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-## 3. Descrição de Imagens
-<p>Imagens devem ser compreensíveis para usuários cegos ou com baixa visão, garantindo equivalência informacional.</p>
+Conteúdos ao vivo com áudio ou vídeo devem possuir legendas ao vivo. [[NBR 5.14.9]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  A descrição identifica claramente o tipo e o conteúdo principal da imagem.
-  [<a href="#refUK">Guia UK-BR – Cap. Imagens</a>]
-</label>
+Animações devem possuir mecanismo de controle quando puderem distrair, atrapalhar a leitura ou causar desconforto. [[NBR 5.15.1]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Imagens com ação possuem descrição da ação representada.
-  [<a href="#refUK">Guia UK-BR – Cap. Imagens</a>]
-</label>
+Conteúdos com limite de tempo devem permitir ajuste, extensão ou desligamento do tempo quando necessário. [[NBR 5.16.2]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Imagens complexas possuem descrição longa separada.
-  [<a href="#refUK">Guia UK-BR – Cap. Imagens</a>]
-</label>
+Atualizações automáticas de conteúdo devem possuir controle, evitando interrupções inesperadas na jornada do usuário. [[NBR 5.16.3]](https://unb-ihc.github.io/IHC-2025.2-Grupo6/manual/devWeb/#NBR)
 
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Alternativas textuais são curtas, claras e significativas.
-  [<a href="#refWCAGALT">WCAG 1.1.1</a>]
-</label>
+--- 
 
-<hr>
+## Referências Bibliograficas
 
-## 4. Áudio e Vídeo
-<p>Conteúdos multimídia devem ser acessíveis para usuários com deficiência auditiva, visual ou cognitiva.</p>
-
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Vídeos incluem descrição breve do contexto visual.
-  [<a href="#refUK">Guia UK-BR – Cap. Multimídia</a>]
-</label>
-
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Vídeos oferecem legendas.
-  [<a href="#refUK">Guia UK-BR – Cap. Multimídia</a>]
-  [<a href="#refWCAGCaption">WCAG 1.2.2</a>]
-</label>
-
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Audiodescrição é fornecida quando necessária.
-  [<a href="#refNBR">NBR 5.14.4</a>]
-  [<a href="#refWCAGADesc">WCAG 1.2.5</a>]
-</label>
-
-<label class="criterio">
-  <input type="checkbox" data-group="gestao">
-  Sons relevantes são legendados.
-  [<a href="#refNBR">NBR 5.14.2</a>]
-  [<a href="#refWCAGCaption">WCAG 1.2.2</a>]
-</label>
-
-<hr>
-
-
-<hr>
-
- ## Referências Bibliográficas
-
-> <a id="refWCAGALT">1.</a> Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2. <strong>Critério de Sucesso 1.1.1 Conteúdo Não Textual (Nível A).</strong> 
-> <br>Disponível em: <a target="_blank" href="https://www.w3.org/TR/WCAG22/#non-text-content">https://www.w3.org/WAI/standards-guidelines/wcag/</a>. 
-> <br>Acesso em: 15 nov. 2025.
-
-> <a id="refWCAGADesc">2.</a> Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2. <strong>Critério de Sucesso 1.2.5 Audiodescrição (Pré-gravada) (Nível AA).</strong>
-> <br>Disponível em: <a target="_blank" href="https://www.w3.org/TR/WCAG22/#audio-description-prerecorded">https://www.w3.org/WAI/standards-guidelines/wcag/</a>.
-> <br>Acesso em: 10 nov. 2025.
-
-> <a id="refWCAGCaption">3.</a> Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2. <strong>Critério de Sucesso 1.2.2 Legendas (Pré-gravado) (Nível A).</strong>
-> <br>Disponível em: <a target="_blank" href="https://www.w3.org/TR/WCAG22/#audio-description-prerecorded">https://www.w3.org/WAI/standards-guidelines/wcag/</a>.
-> <br>Acesso em: 10 nov. 2025.
-
-> <a id="refWCAG1">4.</a> Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2. <strong>Critério de Sucesso 1.3.1 Informação e Relacionamentos (Nível A).</strong>
-> <br>Disponível em: <a target="_blank" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">https://www.w3.org/WAI/standards-guidelines/wcag/</a>.
-> <br>Acesso em: 10 nov. 2025.
-
-> <a id="refUK">5.</a> DINIZ, V. et al. <strong>Guia de Boas Práticas para Acessibilidade Digital — UK-BR (2023).</strong> 
-> <br>Disponível em: <a target="_blank" href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf">https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf</a>. 
-> <br>Acesso em: 14 nov. 2025.
-
-> <a id="refNBR">6.</a> ABNT NBR 17225:2025. <strong>Acessibilidade em Conteúdo e Aplicações Web – Requisitos.</strong> 
-> <br>Disponível em: <a target="_blank" href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf">https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf</a>. 
-> <br>Acesso em: 15 nov. 2025.
-
-<hr>
-
-##  Histórico de Versão
-
-| Versão | Data | Descrição | Autor(es)| Revisor(es) |
-|--------|------|-----------|-----------|-------------|
-| 1.0 | 14/11/2025 | Criação dos critérios |[ Giovana Fontes ](https://github.com/GiovanaFontesS)  | [Isabella Choukaira](https://github.com/isabellachoukaira) | 
-| 1.1 | 16/11/2025 | Adição das Referências |[ Giovana Fontes ](https://github.com/GiovanaFontesS) | [Isabella Choukaira](https://github.com/isabellachoukaira) | 
-
-<hr>
-
-<script src="js/grafico_p2.js"></script>
+> <a id="NBR" href=""> </a> ABNT NBR 17225:2025. **Acessibilidade em conteúdo e aplicações web – Requisitos**. Disponível em: [https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) Acesso em: 23 Jun. 2026

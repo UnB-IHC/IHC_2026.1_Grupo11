@@ -25,9 +25,10 @@ theme:
 nav:
   - Início: index.md
   - Guia de Acessibilidade:
-    - Design: guia_acessibilidade/design.md
-    - Desenvolvimento: guia_acessibilidade/desenvolvimentoWeb.md
-    - Geração de Conteúdo: guia_acessibilidade/geracaoConteudo.md
+    - Desenvolvimento Web: guia_acessibilidade/desenvolvimentoWeb.md
+    - Design de Interface e UX: guia_acessibilidade/design.md
+    - Conteúdo e Comunicação: guia_acessibilidade/geracaoConteudo.md
+    - Formulários, Entrada de Dados e Prevenção de Erros: guia_acessibilidade/form.md
   - Aplicação do Guia e Ferramentas: aplicacao_guia/aplicacao-guia.md
   - Teste de Usabilidade: teste_usabilidade/teste-usabilidade.md
 
