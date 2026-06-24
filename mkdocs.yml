@@ -38,7 +38,7 @@ nav:
       - Introdução: ferramentas/introducao.md
       - Ferramentas de Acessibilidade:
         - VLibras: ferramentas/vlibras.md
-        - Accessibility Insights: ferramentas/accessibilityInsights.md
+        - Acess Monitor Plus: ferramentas/acessMonitorPlus.md
         - ASES: ferramentas/ases.md
         - WAVE: ferramentas/wave.md
         - Lighthouse: ferramentas/lighthouse.md
