@@ -34,6 +34,15 @@ nav:
     - Formulários, Entrada de Dados e Prevenção de Erros: guia_acessibilidade/form.md
   - Aplicação do Guia e Ferramentas: aplicacao_guia/aplicacao-guia.md
   - Teste de Usabilidade: teste_usabilidade/teste-usabilidade.md
+  - Ferramentas:
+      - Introdução: ferramentas/introducao.md
+      - Ferramentas de Acessibilidade:
+        - VLibras: ferramentas/vlibras.md
+        - Accessibility Insights: ferramentas/accessibilityInsights.md
+        - ASES: ferramentas/ases.md
+        - WAVE: ferramentas/wave.md
+        - Lighthouse: ferramentas/lighthouse.md
+
 
 markdown_extensions:
   - admonition
