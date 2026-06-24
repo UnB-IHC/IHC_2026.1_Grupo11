@@ -25,6 +25,9 @@ theme:
 nav:
   - Início: index.md
   - Guia de Acessibilidade:
+    - Introdução: guia_acessibilidade/apresentacaoGuia.md
+    - Pesquisa de UX: guia_acessibilidade/ux_pesquisa.md
+    - Estratégia de Serviço: guia_acessibilidade/estrategia_servico.md
     - Desenvolvimento Web: guia_acessibilidade/desenvolvimentoWeb.md
     - Design de Interface e UX: guia_acessibilidade/design.md
     - Conteúdo e Comunicação: guia_acessibilidade/geracaoConteudo.md
