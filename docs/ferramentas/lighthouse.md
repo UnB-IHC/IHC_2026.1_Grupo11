@@ -26,7 +26,7 @@
 
 ## Problemas encontrados
 
-Durante a avaliação de acessibilidade de acessibilidade, foram identificadas as seguintes inconformidades em relação às diretrizes da WCAG 2.2:
+Durante a avaliação  de acessibilidade, foram identificadas as seguintes inconformidades em relação às diretrizes da WCAG 2.2:
 
 * **Elementos de toque sem tamanho ou espaçamento suficiente:** Algumas áreas clicáveis 
  não possuem o dimensionamento adequado, o que dificulta a navegação porque em dispositivos móveis.
