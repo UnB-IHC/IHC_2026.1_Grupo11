@@ -1,0 +1,13 @@
+# Perfil do usuário-alvo
+Conforme orienta **Krug** (2014), antes de recrutar um participante é necessário definir o **público real** do produto — quem são as pessoas para quem a plataforma foi projetada. A **Tela Brasil** é um serviço público **federal gratuito**, acessível a qualquer cidadão com conta **Gov.br** ativa. Por ser uma plataforma com **acervo diversificado**, seu público é **amplo** e **heterogêneo**, podendo ser segmentado nos seguintes perfis principais:
+
+| Perfil de Usuário | Faixa Etária | Familiaridade Tecnológica | Contexto de Uso |
+| :--- | :--- | :--- | :--- |
+| **Família com crianças** | Crianças: Livre a 12 anos. Acesso via perfil infantil criado pelo responsável adulto. | Básica a intermediária. O responsável configura o perfil infantil e o PIN de controle parental. | Lazer doméstico supervisionado; fins de semana; dispositivo compartilhado em casa. |
+| **Jovens e adolescentes** | 13 a 17 anos. Faixas 12, 14 e 16 anos conforme Classificação Indicativa (MJ, 2025). | Alta familiaridade com smartphones e plataformas de streaming (YouTube, Netflix etc.). | Lazer individual ou com amigos; uso noturno e fins de semana; celular ou computador pessoal. |
+| **Adultos (público geral)** | 18 a 59 anos. Acesso livre a todo o catálogo. | Variada: básica a avançada. Maioria já utiliza serviços Gov.br (ex.: INSS, Imposto de Renda). | Lazer doméstico; período noturno e fins de semana; computador, notebook ou celular. |
+| **Idosos** | 60 anos ou mais. Sem restrição de acesso. | Básica a intermediária. Possíveis dificuldades com login Gov.br, navegação e elementos pequenos na interface. | Lazer em casa; horários variados; preferência por TV — acesso via Smart TV ou espelhamento de tela. |
+| **Pessoas com deficiência** | Todas as faixas etárias. | Variada. Utilizam tecnologias assistivas: leitores de tela, teclado adaptado, controle de voz. | Lazer ou acesso cultural. Buscam conteúdos com audiodescrição, Libras e legendas descritivas (300+ obras disponíveis). |
+| **Educadores e cineclubes (Perfil Direcionado)** | Adultos (18+): professores e mediadores culturais. | Intermediária a avançada. Uso intencional e planejado para exibições coletivas. | Escolas, bibliotecas, cineclubes, pontos de cultura. Exibições coletivas sem fins comerciais. |
+
+###### *Fonte: Ministério da Cultura (2026); Gov.br (2026); Krug (2014). Perfis construídos com base nas informações públicas sobre a plataforma e na Classificação Indicativa do Ministério da Justiça (atualizada em 2025).*

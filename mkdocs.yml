@@ -33,7 +33,16 @@ nav:
     - Conteúdo e Comunicação: guia_acessibilidade/geracaoConteudo.md
     - Formulários, Entrada de Dados e Prevenção de Erros: guia_acessibilidade/form.md
   - Aplicação do Guia e Ferramentas: aplicacao_guia/aplicacao-guia.md
-  - Teste de Usabilidade: teste_usabilidade/teste-usabilidade.md
+  - Teste de Usabilidade: 
+    - Introdução: teste_usabilidade/teste-usabilidade.md
+    - Roteiro de Tarefas: teste_usabilidade/roteiro-tarefas.md
+    - Perfil de Usuário: teste_usabilidade/perfil-user.md
+    - Participantes: teste_usabilidade/participantes.md
+    - Procedimentos: teste_usabilidade/procedimentos.md
+    - Formulário SUS: teste_usabilidade/form-sus.md
+    - Métricas de Usabilidade: teste_usabilidade/metricas-usabilidade.md
+    - Referências: teste_usabilidade/referencias.md
+
   - Ferramentas:
       - Introdução: ferramentas/introducao.md
       - Ferramentas de Acessibilidade:
