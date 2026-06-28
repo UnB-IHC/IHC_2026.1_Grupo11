@@ -15,21 +15,21 @@ A acessibilidade deve ser compreendida de forma sistêmica, impactando não apen
 
 O Service Blueprint mapeia como a interface (front-stage) se conecta com a estrutura de código (back-stage) para entregar uma experiência acessível.
 
-* **Evidência Física (Interface):**
-  * Botões com contraste > 4.5:1.
-  * Foco de teclado visível em elementos interativos.
-  * Textos com fonte legível e espaçamento adequado.
-* **Ação do Usuário:**
-  * Navega utilizando a tecla `Tab`.
-  * Escuta o conteúdo via leitor de tela.
-  * Amplia o zoom da tela para 200%.
-* **Front-stage (O que o usuário percebe):**
-  * Feedback imediato de erro no formulário.
-  * Ícones funcionais acompanhados de rótulos de texto visíveis.
-* **Back-stage (Código / Semântica):**
-  * Uso correto de tags semânticas HTML5 (`<main>`, `<nav>`, `<button>`).
-  * Inserção de atributos `aria-label` e `alt` em elementos não textuais.
-  * Gerenciamento de estado de foco dinâmico via JavaScript sem quebra de fluxo.
-* **Processos de Suporte:**
-  * Auditoria contínua de código via ferramentas de avaliação.
-  * Testes periódicos com tecnologias assistivas e usuários reais.
+- [ ] **Evidência Física (Interface):**
+  - [ ] Botões com contraste > 4.5:1.
+  - [ ] Foco de teclado visível em elementos interativos.
+  - [ ] Textos com fonte legível e espaçamento adequado.
+- [ ] **Ação do Usuário:**
+  - [ ] Navega utilizando a tecla `Tab`.
+  - [ ] Escuta o conteúdo via leitor de tela.
+  - [ ] Amplia o zoom da tela para 200%.
+- [ ] **Front-stage (O que o usuário percebe):**
+  - [ ] Feedback imediato de erro no formulário.
+  - [ ] Ícones funcionais acompanhados de rótulos de texto visíveis.
+- [ ] **Back-stage (Código / Semântica):**
+  - [ ] Uso correto de tags semânticas HTML5 (`<main>`, `<nav>`, `<button>`).
+  - [ ] Inserção de atributos `aria-label` e `alt` em elementos não textuais.
+  - [ ] Gerenciamento de estado de foco dinâmico via JavaScript sem quebra de fluxo.
+- [ ] **Processos de Suporte:**
+  - [ ] Auditoria contínua de código via ferramentas de avaliação.
+  - [ ] Testes periódicos com tecnologias assistivas e usuários reais.
