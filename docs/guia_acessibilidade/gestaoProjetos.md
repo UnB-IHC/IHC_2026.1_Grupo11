@@ -2,7 +2,7 @@
 
 Um produto digital acessível não surge apenas de uma revisão técnica feita antes da publicação. A acessibilidade precisa orientar decisões de escopo, orçamento, pesquisa, design, desenvolvimento, conteúdo, testes e manutenção.
 
-Este roteiro apresenta práticas para incorporar a acessibilidade à gestão do projeto. As orientações têm como base a **ABNT NBR 17225:2025**, as **WCAG 2.1 e 2.2** e o **Guia de Boas Práticas para Acessibilidade Digital**.
+Este roteiro apresenta práticas para incorporar a acessibilidade à gestão do projeto. As orientações têm como base a [**ABNT NBR 17225:2025**](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf), as [**WCAG 2.1 e 2.2**](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=2.%20Oper%C3%A1vel,devem%20ser%20oper%C3%A1veis.) e o [**Guia de Boas Práticas para Acessibilidade Digital**](https://www.cgi.br/media/docs/publicacoes/13/20230920121455/guia_boas_praticas_acessibilidade_digital.pdf).
 
 ## Acessibilidade como compromisso do projeto
 
@@ -67,7 +67,7 @@ Um bom critério de aceite informa:
 
 Por exemplo:
 
-> Ao navegar somente pelo teclado, a pessoa usuária consegue alcançar e acionar todos os controles do formulário em uma ordem lógica, com o foco sempre visível. A verificação será feita manualmente, sem o uso do mouse. [WCAG 2.1.1, 2.4.3 e 2.4.7]
+> Ao navegar somente pelo teclado, a pessoa usuária consegue alcançar e acionar todos os controles do formulário em uma ordem lógica, com o foco sempre visível. A verificação será feita manualmente, sem o uso do mouse. [WCAG 2.1.1](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Diretriz%202.1%20Acess%C3%ADvel%20por%20Teclado)  [WCAG 2.4.3](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.3%20Ordem%20do%20Foco) e [WACG 2.4.7](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.7%20Foco%20Vis%C3%ADvel)
 
 Para componentes e fluxos interativos, avalie se os critérios de aceite incluem:
 
