@@ -10,4 +10,4 @@ Conforme orienta **Krug** (2014), antes de recrutar um participante é necessár
 | **Pessoas com deficiência** | Todas as faixas etárias. | Variada. Utilizam tecnologias assistivas: leitores de tela, teclado adaptado, controle de voz. | Lazer ou acesso cultural. Buscam conteúdos com audiodescrição, Libras e legendas descritivas (300+ obras disponíveis). |
 | **Educadores e cineclubes (Perfil Direcionado)** | Adultos (18+): professores e mediadores culturais. | Intermediária a avançada. Uso intencional e planejado para exibições coletivas. | Escolas, bibliotecas, cineclubes, pontos de cultura. Exibições coletivas sem fins comerciais. |
 
-###### *Fonte: Ministério da Cultura (2026); Gov.br (2026); Krug (2014). Perfis construídos com base nas informações públicas sobre a plataforma e na Classificação Indicativa do Ministério da Justiça (atualizada em 2025).*
+*Fonte: Ministério da Cultura (2026); Gov.br (2026); Krug (2014). Perfis construídos com base nas informações públicas sobre a plataforma e na Classificação Indicativa do Ministério da Justiça (atualizada em 2025).*

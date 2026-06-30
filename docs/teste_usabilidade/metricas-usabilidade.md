@@ -1,124 +1,40 @@
 # Métricas de Usabilidade
 
-Nesta seção serão apresentados os resultados obtidos durante os testes de usabilidade realizados com os participantes selecionados
+Nesta seção serão apresentados os resultados gerais obtidos durante os testes de usabilidade realizados com o participante selecionado. Ao final da seção, será feita análise a fim de identificar aspectos relacionados à acessibilidade, inclusão e qualidade da experiência do usuário.
 
-## Métricas Gerais
+## Análise Geral
 
-Nesta subseção são apresentadas as métricas utilizadas para avaliação de usabilidade.
+Esta subseção apresenta de forma consolidada os dados coletados.
 
-| **Métricas** | **Como medir** | **Relação com Krug e Nielsen** |
-| :--- | :--- | :--- |
-| **Sucesso** | Concluiu ou não a tarefa. | Avalia a eficácia da interface |
-| **Tempo de execução** | Tempo entre o início e a conclusão da tarefa. | Avalia a eficiência de uso |
-| **Número de cliques** | Quantidade de interações até concluir a tarefa. | Avalia carga cognitiva através de caminhos da interação |
-| **Cliques incorretos** | Quantidade de cliques que não contribuem com a conclusão da tarefa. | Avalia quão intuitiva é a interface |
-| **Pausas (hesitações)** | Número de pausas superiores a 10 segundos durante a execução da tarefa. | Avalia dificuldade de compreensão |
-| **Ajuda solicitada** | Quantidade de intervenções do avaliador. | Avalia o grau de autonomia proporcionado |
-| **Satisfação** | Avaliação subjetiva em uma escala de 1 a 5 | Avalia qualidade da experiência do usuário |
-| **Comentários** | Registro das falas do usuário durante o teste. | Dados qualitativos que auxiliam na interpretação dos resultados |
+| **Métricas** | **P1** |
+| :--- | :--- |
+| **Tempo por tarefa** | ~ 28 min 57s (20:14:05 - 20:38:02) |
+| **Total de cliques** | ~ 102 |
+|**Total de cliques incorretos** | 8 (conforme avaliador) |
+| **Total de hesitações** | 16 (conforme avaliador) |
+| **Solicitação de ajuda** | 0 |
+| **Pontuação SUS** | 67,5 |
 
+### Discussão dos Resultados
+Os testes realizados com P1 resultaram em uma pontuação SUS de 67,5, classificada como “Boa” na escala de adjetivos de Bangor, indicando uma experiência aceitável, mas com necessidade de melhorias. O resultado é coerente com o desempenho descrito na seção 3.6.3, o participante apresentou dificuldade na realização da Tarefa 2 e 4, não conseguindo concluí-las integralmente, mas nas demais tarefas demonstrou facilidade, elogiando organização, interatividade das ações e segurança da plataforma devido integração com o Gov.br.
 
-## Coleta de Dados
+A distribuição dos erros e hesitações evidencia as funcionalidades que mais precisam ser aprimoradas. A T4 - Audiodescrição, registrou sozinha 5 dos 8 erros totais e 8 das 16 hesitações. Logo, observa-se que, apesar da plataforma adotar mecanismo de ativação semelhante aos de plataformas comerciais de streaming, os resultados indicam dificuldade em localizar e utilizar o recurso. Isso mostra que a funcionalidade ainda pode representar uma barreira para parte dos usuários.
 
-### Tarefa 1 - Login
+A T2, referente a busca por conteúdos, foi parcialmente bem-sucedida, tendo P1 revelado dificuldade em identificar quais categorias e gêneros a plataforma ofertava, devido à taxonomia própria adotada pela plataforma.
 
-Esta tarefa teve como objetivo avaliar a facilidade de autenticação na plataforma.
+Concluindo, o total de cliques registrados durante a sessão sugere uma alta carga de interação para o perfil de P1, especialmente relacionadas à busca de conteúdos e aos recursos de acessibilidade.
 
-| Métricas | P1 | P2 |
-| :--- | :--- | :--- |
-| Sucesso | |  |
-| Tempo de execução |  |  |
-| Número de cliques |  |  |
-| Cliques incorretos |  |  |
-| Pausas (hesitações) |  |  |
-| Ajuda solicitada |  |  |
-| Satisfação | | |
-| Comentários |  |  |
+### Problemas Encontrados
 
-### Tarefa 2 - Busca por mídia audiovisual
+**Problema 1 - Recursos de acessibilidade de difícil ativação** 
+Durante a tarefa de localizar a ferramenta de audiodescrição, P1 realizou diversas tentativas sem sucesso.
 
-Esta tarefa teve como objetivo avaliar a capacidade dos participantes de localizar conteúdos audiovisuais.
+**Problema 2 - Categorias não intuitivas**  
+P1 apresentou dificuldade em compreender a organização do catálogo, verbalizando que espera encontrar gêneros tradicionais como “comédia”.
 
-| Métricas | P1 | P2 |
-| :--- | :--- | :--- |
-| Sucesso | |  |
-| Tempo de execução |  |  |
-| Número de cliques |  |  |
-| Cliques incorretos |  |  |
-| Pausas (hesitações) |  |  |
-| Ajuda solicitada |  |  |
-| Satisfação | | |
-| Comentários |  |  |
+### Recomendação de Melhoria
+Os resultados indicam que a plataforma Tela Brasil apresenta boa usabilidade para tarefas básicas, como autenticação, acesso a conteúdo para o público infantil e gerenciamento de conteúdos salvos. Entretanto, a navegação por categoria e a localização de recursos de acessibilidade representam pontos críticos na eficiência da interação. Buscando reduzir essas dificuldades são apresentadas as seguintes recomendações:
 
-### Tarefa 3 - Filtro por conteúdo
+**Categorias pouco intuitivas:** Reorganizar taxonomia do catálogo adotando padrões tradicionais, mantendo categorias relacionadas a órgãos governamentais como filtragem secundária.   
 
-Esta tarefa teve como objetivo avaliar a facilidade de utilização de mecanismos de filtragem.
-
-| Métricas | P1 | P2 |
-| :--- | :--- | :--- |
-| Sucesso | |  |
-| Tempo de execução |  |  |
-| Número de cliques |  |  |
-| Cliques incorretos |  |  |
-| Pausas (hesitações) |  |  |
-| Ajuda solicitada |  |  |
-| Satisfação | | |
-| Comentários |  |  |
-
-### Tarefa 4 - Audiodescrição
-
-Esta tarefa teve como objetivo avaliar a capacidade de localização e utilização dos recursos de acessibilidade oferecidos pela plataforma.
-
-| Métricas | P1 | P2 |
-| :--- | :--- | :--- |
-| Sucesso | |  |
-| Tempo de execução |  |  |
-| Número de cliques |  |  |
-| Cliques incorretos |  |  |
-| Pausas (hesitações) |  |  |
-| Ajuda solicitada |  |  |
-| Satisfação | | |
-| Comentários |  |  |
-
-### Tarefa 5 - Favoritar
-
-Esta tarefa teve como objetivo avaliar a descoberta e utilização do recurso de favoritos.
-
-| Métricas | P1 | P2 |
-| :--- | :--- | :--- |
-| Sucesso |  |  |
-| Tempo de execução |  |  |
-| Número de cliques |  |  |
-| Cliques incorretos |  |  |
-| Pausas (hesitações) |  |  |
-| Ajuda solicitada |  |  |
-| Satisfação | | |
-| Comentários |  |  |
-
-## Análise Geral dos Perfis
-
-Esta subseção apresenta uma comparação consolidada dos dados coletados. A análise busca identificar diferenças de desempenho durante todo o uso da plataforma.
-
-| **Métricas** | **P1** | **P2** |
-| :--- | :--- | :--- |
-| **Tempo por tarefa** | |  |
-| **Total de cliques** |  |  |
-|**Total de cliques incorretos** |  |  |
-| **Total de hesitações** |  |  |
-| **Total de solicitação de ajuda** |  |  |
-| **Satisfação média** | | |
-| **Pontuação SUS** |  |  |
-
-## Análise por Tarefa
-
-Nesta subseção são apresentados os resultados médios obtidos em cada tarefa. A análise busca identificar quais funcionalidades apresentam melhor desempenho.
-
-| Tarefa | Taxa de Sucesso (%) | Tempo (s) | Cliques | Erros | Hesitações | Ajuda |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Login** | | | | | | |
-| **Busca** | | | | | | |
-| **Filtro** | | | | | | |
-| **Audiodescrição** | | | | | | |
-| **Favoritos** | | | | | | |
-
-## Análise Comparativa
+**Indicadores visuais:** Inserir mensagens que sinalizem ao usuário onde encontrar funcionalidades importantes.
