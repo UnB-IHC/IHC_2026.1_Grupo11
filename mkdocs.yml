@@ -28,6 +28,8 @@ nav:
     - Introdução: guia_acessibilidade/apresentacaoGuia.md
     - Pesquisa de UX: guia_acessibilidade/ux_pesquisa.md
     - Estratégia de Serviço: guia_acessibilidade/estrategia_servico.md
+    - Gestão de Projetos: guia_acessibilidade/gestaoProjetos.md
+    - Heurísticas: guia_acessibilidade/heuristicas.md
     - Desenvolvimento Web: guia_acessibilidade/desenvolvimentoWeb.md
     - Design de Interface e UX: guia_acessibilidade/design.md
     - Conteúdo e Comunicação: guia_acessibilidade/geracaoConteudo.md
@@ -67,3 +69,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
