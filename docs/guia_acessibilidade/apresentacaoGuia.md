@@ -1,4 +1,4 @@
-# Guia Prático de Acessibilidade Digital e Design Empático
+# Introdução ao guia Prático de Acessibilidade Digital
 *IHC 2026.1 — Grupo 11*
 
 ## Bem-vindo ao Guia
@@ -54,7 +54,9 @@ Alguns temas abrem com um painel visual mostrando o progresso por nível WCAG (A
 Itens **N/A não entram no denominador** senão eles inflam artificialmente a porcentagem de conformidade.
 
 > **O que esse painel é (e o que ele não é):** a WCAG não define porcentagem nenhuma, conformidade lá é binária (a página atende ao nível completo ou não atende) e é avaliada por página real do produto, não por tema deste guia. Os anéis aqui são uma ferramenta de **acompanhamento da sua auditoria**, não uma reivindicação formal de conformidade WCAG. Use-os para enxergar progresso, não como selo de aprovação.
->
+
+> **Dica de uso:** O painel de conformidade reflete o estado atual da sua auditoria em tempo real. O gráfico recalcula automaticamente à medida que você interage com os botões. Note que, ao marcar o primeiro item de uma categoria como "Conforme", o gráfico atingirá 100% daquela tarefa específica. Conforme você expande a auditoria e marca novos itens, o gráfico se ajusta dinamicamente, refletindo o progresso real frente ao total de critérios aplicáveis que você já avaliou.
+
 > **Sobre o Nível AAA:** o próprio W3C recomenda *não* tratar o Nível AAA como meta obrigatória para o site inteiro, porque nem todo tipo de conteúdo consegue satisfazer todos os critérios AAA. Na prática, **o Nível AA é o alvo realista** — é o que a maioria das organizações busca e o que costuma ser referenciado legalmente. Trate o painel de AAA como aspiracional: bom de perseguir onde for viável, não um requisito para considerar o trabalho "completo".
 
 ### Lembrete sobre conformidade WCAG

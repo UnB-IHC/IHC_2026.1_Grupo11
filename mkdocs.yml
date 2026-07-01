@@ -78,3 +78,5 @@ extra_css:
   - stylesheets/conformidade.css
 extra_javascript:
   - javascripts/conformidade.js
+  - javascripts/heuristicas.js
+  
