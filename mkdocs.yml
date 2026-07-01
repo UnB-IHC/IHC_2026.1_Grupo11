@@ -26,8 +26,7 @@ nav:
   - Início: index.md
   - Guia de Acessibilidade:
     - Introdução: guia_acessibilidade/apresentacaoGuia.md
-    - Pesquisa de UX: guia_acessibilidade/ux_pesquisa.md
-    - Estratégia de Serviço: guia_acessibilidade/estrategia_servico.md
+    - Blueprinting: guia_acessibilidade/blueprinting.md
     - Gestão de Projetos: guia_acessibilidade/gestaoProjetos.md
     - Heurísticas: guia_acessibilidade/heuristicas.md
     - Desenvolvimento Web: guia_acessibilidade/desenvolvimentoWeb.md
@@ -79,4 +78,3 @@ extra_css:
 extra_javascript:
   - javascripts/conformidade.js
   - javascripts/heuristicas.js
-  
