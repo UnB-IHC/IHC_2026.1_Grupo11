@@ -1,8 +1,11 @@
 /**
- * heuristicas.js
- * Controla itens de checklist com 1 estado (Verificado / Pendente),
+ * conformidade.js
+ * Controla itens de checklist com 3 estados (Conforme / Não conforme / N/A),
  * persiste a escolha no localStorage do navegador e recalcula os anéis
- * de progresso por heurística sempre que algo muda.
+ * de progresso por nível WCAG (A, AA, AAA) sempre que algo muda.
+ *
+ * Os itens N/A NÃO entram no denominador do cálculo de % — só
+ * "Conforme" e "Não conforme" contam como "aplicável".
  *
  * Compatível com a navegação instantânea do Material for MkDocs
  * (feature `navigation.instant`), que troca o conteúdo da página via
@@ -13,7 +16,8 @@
   "use strict";
 
   function storagePrefix() {
-    return "heuristicas:" + location.pathname + ":";
+    // Namespacing por página: cada rota tem seu próprio conjunto de respostas.
+    return "a11y:" + location.pathname + ":";
   }
 
   function loadState(id) {
@@ -21,7 +25,7 @@
       var raw = localStorage.getItem(storagePrefix() + id);
       return raw ? JSON.parse(raw) : null;
     } catch (e) {
-      console.warn("heuristicas: não foi possível ler o estado salvo.", e);
+      console.warn("a11y: não foi possível ler o estado salvo.", e);
       return null;
     }
   }
@@ -30,22 +34,29 @@
     try {
       localStorage.setItem(storagePrefix() + id, JSON.stringify(data));
     } catch (e) {
-      console.warn("heuristicas: não foi possível salvar o estado (localStorage indisponível ou cheio).", e);
+      console.warn("a11y: não foi possível salvar o estado (localStorage indisponível ou cheio).", e);
     }
   }
 
-  function applyVisualState(item, checked) {
-    var btn = item.querySelector(".heuristica-btn");
-    if (btn) {
-      btn.classList.toggle("is-active", !!checked);
-      btn.setAttribute("aria-pressed", checked ? "true" : "false");
+  function applyVisualState(item, state) {
+    var buttons = item.querySelectorAll(".a11y-btn");
+    for (var i = 0; i < buttons.length; i++) {
+      var btn = buttons[i];
+      var isActive = btn.getAttribute("data-state") === state;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
     }
-    item.setAttribute("data-current-state", checked ? "verificado" : "");
+    item.setAttribute("data-current-state", state || "");
+
+    var textarea = item.querySelector(".a11y-justificativa");
+    if (textarea) {
+      textarea.hidden = state !== "na";
+    }
   }
 
   function updateDonuts() {
     var groups = {};
-    var items = document.querySelectorAll(".heuristica-item");
+    var items = document.querySelectorAll(".a11y-item");
 
     items.forEach(function (item) {
       var level = item.getAttribute("data-level");
@@ -53,57 +64,78 @@
       if (!level) return;
 
       if (!groups[level]) {
-        groups[level] = { total: 0, verificado: 0 };
+        groups[level] = { conforme: 0, naoConforme: 0, na: 0 };
       }
-      groups[level].total++;
-      if (state === "verificado") groups[level].verificado++;
+      if (state === "conforme") groups[level].conforme++;
+      else if (state === "nao-conforme") groups[level].naoConforme++;
+      else if (state === "na") groups[level].na++;
     });
 
-    var donuts = document.querySelectorAll(".heuristica-donut");
+    var donuts = document.querySelectorAll(".a11y-donut");
     donuts.forEach(function (donut) {
       var level = donut.getAttribute("data-level-group");
-      var g = groups[level] || { total: 0, verificado: 0 };
-      var pct = g.total > 0 ? Math.round((g.verificado / g.total) * 100) : 0;
+      var g = groups[level] || { conforme: 0, naoConforme: 0, na: 0 };
+      var applicable = g.conforme + g.naoConforme; // N/A fica fora do denominador
+      var pct = applicable > 0 ? Math.round((g.conforme / applicable) * 100) : 0;
 
-      var ring = donut.querySelector(".heuristica-donut-ring");
-      var center = donut.querySelector(".heuristica-donut-center");
-      var count = donut.querySelector(".heuristica-donut-count");
+      var ring = donut.querySelector(".a11y-donut-ring");
+      var center = donut.querySelector(".a11y-donut-center");
+      var count = donut.querySelector(".a11y-donut-count");
 
       if (ring) ring.style.setProperty("--pct", pct);
       if (center) center.textContent = pct + "%";
-      if (count) count.textContent = "(" + g.verificado + "/" + g.total + ")";
+      if (count) {
+        var label = "(" + g.conforme + "/" + applicable + ")";
+        if (g.na > 0) label += " · " + g.na + " N/A";
+        count.textContent = label;
+      }
     });
   }
 
   function initItem(item) {
     var id = item.getAttribute("data-id");
     if (!id) {
-      console.warn("heuristicas: item de checklist sem data-id foi ignorado.", item);
+      console.warn("a11y: item de checklist sem data-id foi ignorado.", item);
       return;
     }
 
     var saved = loadState(id);
-    applyVisualState(item, saved ? saved.checked : false);
+    applyVisualState(item, saved ? saved.state : null);
 
-    var btn = item.querySelector(".heuristica-btn");
-    if (btn) {
+    var textarea = item.querySelector(".a11y-justificativa");
+    if (textarea && saved && saved.justificativa) {
+      textarea.value = saved.justificativa;
+    }
+
+    var buttons = item.querySelectorAll(".a11y-btn");
+    buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
+        var state = btn.getAttribute("data-state");
         var current = loadState(id) || {};
-        current.checked = !current.checked;
+        current.state = state;
         saveState(id, current);
-        applyVisualState(item, current.checked);
+        applyVisualState(item, state);
         updateDonuts();
+      });
+    });
+
+    if (textarea) {
+      textarea.addEventListener("input", function () {
+        var current = loadState(id) || {};
+        current.justificativa = textarea.value;
+        saveState(id, current);
       });
     }
   }
 
   function init() {
-    var items = document.querySelectorAll(".heuristica-item");
+    var items = document.querySelectorAll(".a11y-item");
     items.forEach(initItem);
     updateDonuts();
   }
 
   if (window.document$ && typeof window.document$.subscribe === "function") {
+    // Material for MkDocs com navegação instantânea
     window.document$.subscribe(init);
   } else {
     document.addEventListener("DOMContentLoaded", init);
