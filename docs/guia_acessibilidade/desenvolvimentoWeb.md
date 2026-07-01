@@ -1,6 +1,6 @@
 # Desenvolvimento Web
 
-Aqui a equipe de desenvolvimento precisa saber implementar, verificar e testar acessibilidade — e entender como pessoas com deficiência realmente usam sites e aplicativos.
+Aqui a equipe de desenvolvimento precisa saber implementar, verificar e testar acessibilidade e entender como pessoas com deficiência realmente usam sites e aplicativos.
 
 Esta página usa os componentes interativos do guia: clique em **Conforme**, **Não conforme** ou **Não aplicável** em cada critério. Sua escolha fica salva no seu navegador, e o painel abaixo recalcula sozinho.
 
