@@ -136,7 +136,19 @@ Defina acessibilidade desde a abertura do projeto, considerando pessoas, jornada
 
 ## Distribuição de responsabilidades
 
-A responsabilidade é compartilhada, mas cada entrega precisa ter responsável, prazo e forma de validação definidos.
+A acessibilidade é uma responsabilidade compartilhada, mas isso não significa deixá-la sem responsáveis definidos. Cada área deve saber o que precisa entregar e como seu trabalho será avaliado.
+
+| Área | Responsabilidades relacionadas à acessibilidade |
+| --- | --- |
+| **Gestão** | Definir objetivos, responsáveis, orçamento, cronograma, riscos e critérios de aprovação. |
+| **Pesquisa** | Incluir pessoas com deficiência, investigar barreiras e representar diferentes contextos de uso. |
+| **Design** | Criar fluxos previsíveis, componentes perceptíveis, boa hierarquia visual e interação independente de precisão motora. |
+| **Desenvolvimento** | Utilizar HTML semântico, garantir operação por teclado e compatibilidade com tecnologias assistivas. |
+| **Conteúdo** | Produzir textos claros, alternativas para imagens e recursos acessíveis para áudio e vídeo. |
+| **Qualidade** | Combinar avaliações automáticas, inspeções manuais e testes com usuários. |
+| **Manutenção** | Preservar os requisitos após atualizações e tratar relatos de novas barreiras. |
+
+Essa divisão deve aparecer no plano do projeto e nas tarefas da equipe. Sempre que houver dependência entre áreas, como a produção de legenda, texto alternativo ou mensagem de erro, o responsável e o prazo devem ser explícitos.
 
 ## Planejamento das entregas
 
