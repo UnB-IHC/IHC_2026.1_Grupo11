@@ -1,55 +1,262 @@
-### Estrutura Semântica
+# Desenvolvimento Web
 
-- [ ] Elementos da interface devem usar marcação semântica adequada, evitando substituir botões, links e regiões por `<div>` genéricas sem significado programático. [NBR 5.13.11](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 4.1.2 Nome, Função, Valor](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%204.1.2%20Nome%2C%20Fun%C3%A7%C3%A3o%2C%20Valor)
+Aqui a equipe de desenvolvimento precisa saber implementar, verificar e testar acessibilidade e entender como pessoas com deficiência realmente usam sites e aplicativos.
 
-- [ ] Todos os cabeçalhos devem possuir semântica determinada programaticamente, permitindo que tecnologias assistivas compreendam a hierarquia da página. [NBR 5.3.1](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 1.3.1 Informação e Relações](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%201.3.1%20Informa%C3%A7%C3%B5es%20e%20Rela%C3%A7%C3%B5es)
+Esta página usa os componentes interativos do guia: clique em **Conforme**, **Não conforme** ou **Não aplicável** em cada critério. Sua escolha fica salva no seu navegador, e o painel abaixo recalcula sozinho.
 
-- [ ] A estrutura de cabeçalhos deve ser lógica e consistente, seguindo uma organização que represente corretamente as seções do conteúdo. [NBR 5.3.5](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.4.6 Cabeçalhos e Rótulos](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.6%20Cabe%C3%A7alhos%20e%20R%C3%B3tulos)
+<div class="a11y-panel">
+  <div class="a11y-donut" data-level-group="A">
+    <div class="a11y-donut-label">Nível A</div>
+    <div class="a11y-donut-count">(0/0)</div>
+    <div class="a11y-donut-ring">
+      <div class="a11y-donut-center">0%</div>
+    </div>
+  </div>
+  <div class="a11y-donut" data-level-group="AA">
+    <div class="a11y-donut-label">Nível AA</div>
+    <div class="a11y-donut-count">(0/0)</div>
+    <div class="a11y-donut-ring">
+      <div class="a11y-donut-center">0%</div>
+    </div>
+  </div>
+  <div class="a11y-donut" data-level-group="AAA">
+    <div class="a11y-donut-label">Nível AAA</div>
+    <div class="a11y-donut-count">(0/0)</div>
+    <div class="a11y-donut-ring">
+      <div class="a11y-donut-center">0%</div>
+    </div>
+  </div>
+</div>
 
-- [ ] Regiões como navegação, conteúdo principal e rodapé devem ser identificadas semanticamente para facilitar a compreensão da interface. [NBR 5.4.1](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 1.3.1 Informação e Relações, 2.4.1 Ignorar Blocos](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%201.3.1%20Informa%C3%A7%C3%B5es%20e%20Rela%C3%A7%C3%B5es)
+## Estrutura semântica
 
-- [ ] A ordem dos elementos conforme aparece no código deve ser lógica e intuitiva, preservando o significado e a operabilidade da interface. [NBR 5.13.6](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 1.3.2 Sequência com Significado](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%201.3.2%20Sequ%C3%AAncia%20com%20Significado)
+Botões, links e regiões da página precisam de marcação com significado — não dá pra trocar tudo por `<div>` genérica, porque aí o leitor de tela perde a referência de "isso é clicável" ou "isso é um menu". Os cabeçalhos (`<h1>` a `<h6>`) precisam seguir uma hierarquia lógica, e regiões como navegação, conteúdo principal e rodapé devem estar identificadas semanticamente. ARIA deve ser usado só de forma complementar, quando o HTML nativo não for suficiente.
 
-- [ ] Atributos ARIA (Accessible Rich Internet Applications) devem ser utilizados de forma complementar e apenas quando o HTML semântico nativo não for suficiente para descrever a função ou o estado dinâmico de um elemento. [WCAG 2.2 - 4.1.2 Nome, Função, Valor](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%204.1.2%20Nome%2C%20Fun%C3%A7%C3%A3o%2C%20Valor)
+<div class="a11y-item" data-id="dev-001" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Elementos interativos usam marcação semântica adequada, e não <code>&lt;div&gt;</code> genérica sem significado programático.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.13.11</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#name-role-value" target="_blank">WCAG 2.2 — 4.1.2 Nome, Função, Valor</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
----
+<div class="a11y-item" data-id="dev-002" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Cabeçalhos com semântica determinada programaticamente (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>).
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.3.1</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#info-and-relationships" target="_blank">WCAG 2.2 — 1.3.1 Informação e Relações</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-### Navegação por Teclado
+<div class="a11y-item" data-id="dev-003" data-level="AA">
+  <p class="a11y-text"><strong>[AA]</strong> A estrutura de cabeçalhos é lógica e consistente, representando corretamente as seções do conteúdo.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.3.5</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#headings-and-labels" target="_blank">WCAG 2.2 — 2.4.6 Cabeçalhos e Rótulos</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] Todo elemento interativo essencial deve ser acessível por teclado, garantindo uso por pessoas que não utilizam mouse. [NBR 5.1.13](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.1.1 Teclado](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.1.2%20Sem%20Bloqueio%20do%20Teclado)
+<div class="a11y-item" data-id="dev-004" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Regiões como navegação, conteúdo principal e rodapé são identificadas semanticamente.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.4.1</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#bypass-blocks" target="_blank">WCAG 2.2 — 1.3.1 / 2.4.1 Ignorar Blocos</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] O indicador de foco deve ser visível, permitindo que o usuário saiba qual elemento está selecionado durante a navegação. [NBR 5.1.1](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.4.7 Foco Visível](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.7%20Foco%20Vis%C3%ADvel)
+<div class="a11y-item" data-id="dev-005" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> A ordem dos elementos no código é lógica e intuitiva, preservando significado e operabilidade.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.13.6</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#meaningful-sequence" target="_blank">WCAG 2.2 — 1.3.2 Sequência com Significado</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] A ordem de foco deve ser previsível e seguir uma sequência coerente com a organização visual da interface. [NBR 5.1.4](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.4.3 Ordem do Foco]
+<div class="a11y-item" data-id="dev-006" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Atributos ARIA são usados de forma complementar, só quando o HTML semântico nativo não é suficiente.
+  <span class="a11y-ref"><a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#name-role-value" target="_blank">WCAG 2.2 — 4.1.2 Nome, Função, Valor</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] A interface não deve prender o usuário em uma armadilha de foco, impedindo que ele saia de menus, modais ou componentes interativos pelo teclado. [NBR 5.1.6](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.1.2 Sem Armadilha de Teclado]
+## Navegação por teclado
 
-- [ ] O indicador de foco deve possuir área de contraste suficiente para ser notado e não pode ser completamente ocultado por conteúdos sobrepostos, como banners fixos ou modais na tela. [WCAG 2.2 - 2.4.11 Foco Não Oculto (Mínimo)] e [WCAG 2.2 - 2.4.13 Aparência do Foco]
+Todo elemento interativo essencial precisa funcionar sem mouse. O foco precisa ser visível, seguir uma ordem previsível, e nunca prender a pessoa dentro de um menu ou modal sem saída ("armadilha de teclado").
 
----
+<div class="a11y-item" data-id="dev-007" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Todo elemento interativo essencial é acessível por teclado.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.1.13</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#keyboard" target="_blank">WCAG 2.2 — 2.1.1 Teclado</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-### Botões, Links e Controles
+<div class="a11y-item" data-id="dev-008" data-level="AA">
+  <p class="a11y-text"><strong>[AA]</strong> O indicador de foco é visível durante a navegação por teclado.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.1.1</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#focus-visible" target="_blank">WCAG 2.2 — 2.4.7 Foco Visível</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] Botões devem possuir semântica de botão, sendo implementados com elementos adequados, como `<button>`, e não apenas com elementos visuais clicáveis. [NBR 5.8.1](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 4.1.2 Nome, Função, Valor]()
+<div class="a11y-item" data-id="dev-009" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> A ordem de foco é previsível e coerente com a organização visual da interface.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.1.4</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#focus-order" target="_blank">WCAG 2.2 — 2.4.3 Ordem do Foco</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] Botões devem ter propósito claro, indicando de forma compreensível a ação que será realizada. [NBR 5.8.3](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.4.4 Propósito do Link (Em Contexto)](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.4%20Finalidade%20do%20Link%20(Em%20contexto))
+<div class="a11y-item" data-id="dev-010" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> A interface não prende o usuário em uma armadilha de foco dentro de menus, modais ou componentes.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.1.6</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#no-keyboard-trap" target="_blank">WCAG 2.2 — 2.1.2 Sem Armadilha de Teclado</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] Links devem possuir semântica de link e indicar claramente seu destino ou função. [NBR 5.7.1](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.4.4 Propósito do Link (Em Contexto)](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.4%20Finalidade%20do%20Link%20(Em%20contexto))
+<div class="a11y-item" data-id="dev-011" data-level="AA">
+  <p class="a11y-text"><strong>[AA]</strong> O indicador de foco tem contraste suficiente e não fica oculto por banners fixos ou modais.
+  <span class="a11y-ref"><a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#focus-not-obscured-minimum" target="_blank">WCAG 2.2 — 2.4.11 Foco Não Oculto (Mínimo)</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] O propósito de um link deve ser compreensível pelo texto ou pelo contexto em que ele aparece, evitando textos genéricos como “clique aqui”. [NBR 5.7.4](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 2.4.4 Propósito do Link (Em Contexto)](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.4.4%20Finalidade%20do%20Link%20(Em%20contexto))
+## Botões, links e controles
 
-- [ ] Elementos com a mesma função devem manter identificação consistente ao longo da página ou do conjunto de páginas. [NBR 5.8.5](https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf) [WCAG 2.2 - 3.2.4 Identificação Consistente](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%203.2.4%20Identifica%C3%A7%C3%A3o%20Consistente)
+<div class="a11y-item" data-id="dev-012" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Botões são implementados com semântica de botão (<code>&lt;button&gt;</code>), não só elementos clicáveis visuais.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.8.1</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#name-role-value" target="_blank">WCAG 2.2 — 4.1.2 Nome, Função, Valor</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] A área de clique e toque (target size) dos controles interativos deve ter dimensões mínimas de 24x24 pixels CSS, garantindo que usuários com mobilidade reduzida ou tremores não ativem elementos vizinhos por engano. [WCAG 2.2 - 2.5.8 Tamanho do Alvo (Mínimo)](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.5.8%20Tamanho%20do%20Alvo%20(M%C3%ADnimo))
+<div class="a11y-item" data-id="dev-013" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Botões têm propósito claro, indicando de forma compreensível a ação que será realizada.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.8.3</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#link-purpose-in-context" target="_blank">WCAG 2.2 — 2.4.4 Propósito do Link (Em Contexto)</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-- [ ] Qualquer funcionalidade que exija movimento de arrastar (drag-and-drop) deve oferecer uma alternativa simples de clique único ou toque para ser executada, beneficiando usuários com limitações motoras. [WCAG 2.2 - 2.5.7 Movimentos de Arrastar](https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-navigation:~:text=Crit%C3%A9rio%20de%20Sucesso%202.5.7%20Movimentos%20de%20Arrastar)
+<div class="a11y-item" data-id="dev-014" data-level="A">
+  <p class="a11y-text"><strong>[A]</strong> Links têm semântica de link e indicam claramente seu destino, evitando textos genéricos como "clique aqui".
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.7.1, 5.7.4</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#link-purpose-in-context" target="_blank">WCAG 2.2 — 2.4.4 Propósito do Link</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
----
+<div class="a11y-item" data-id="dev-015" data-level="AA">
+  <p class="a11y-text"><strong>[AA]</strong> Elementos com a mesma função mantêm identificação consistente ao longo da página ou do conjunto de páginas.
+  <span class="a11y-ref"><a href="https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf" target="_blank">NBR 5.8.5</a> · <a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-identification" target="_blank">WCAG 2.2 — 3.2.4 Identificação Consistente</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-### Referências Bibliográficas
+<div class="a11y-item" data-id="dev-016" data-level="AA">
+  <p class="a11y-text"><strong>[AA]</strong> A área de clique/toque dos controles interativos tem no mínimo 24×24 pixels CSS.
+  <span class="a11y-ref"><a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#target-size-minimum" target="_blank">WCAG 2.2 — 2.5.8 Tamanho do Alvo (Mínimo)</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 17225: Acessibilidade em conteúdo e aplicações web - Requisitos**. Rio de Janeiro: ABNT, 2025. Disponível em: <https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf>. Acesso em: 16 jun. 2026.
+<div class="a11y-item" data-id="dev-017" data-level="AA">
+  <p class="a11y-text"><strong>[AA]</strong> Funcionalidades de arrastar (drag-and-drop) oferecem uma alternativa simples de clique único ou toque.
+  <span class="a11y-ref"><a href="https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#dragging-movements" target="_blank">WCAG 2.2 — 2.5.7 Movimentos de Arrastar</a></span></p>
+  <div class="a11y-states" role="group" aria-label="Estado de conformidade deste critério">
+    <button type="button" class="a11y-btn" data-state="conforme">Conforme</button>
+    <button type="button" class="a11y-btn" data-state="nao-conforme">Não conforme</button>
+    <button type="button" class="a11y-btn" data-state="na">Não aplicável</button>
+  </div>
+  <textarea class="a11y-justificativa" hidden placeholder="Por que este critério não se aplica ao seu produto?"></textarea>
+</div>
 
-WORLD WIDE WEB CONSORTIUM. **Web Content Accessibility Guidelines (WCAG) 2.2**. [S.l.]: W3C, 2023. Disponível em: <https://www.w3.org/TR/WCAG22/>. Acesso em: 17 jun. 2026.
+## Referências Bibliográficas
 
-WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/>. Acesso em: 17 jun. 2026.
+ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 17225: Acessibilidade em conteúdo e aplicações web - Requisitos**. Rio de Janeiro: ABNT, 2025. Disponível em: <https://mwpt.com.br/wp-content/uploads/2025/04/ABNT-NBR-17225-Acessibilidade-Digital.pdf>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Web Content Accessibility Guidelines (WCAG) 2.2**. [S.l.]: W3C, 2023. Disponível em: <https://www.w3.org/TR/WCAG22/>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 1.3.1: Informação e Relações. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#info-and-relationships>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 1.3.2: Sequência com Significado. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#meaningful-sequence>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.1.1: Teclado. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#keyboard>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.1.2: Sem Armadilha de Teclado. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#no-keyboard-trap>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.4.1: Ignorar Blocos. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#bypass-blocks>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.4.3: Ordem do Foco. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#focus-order>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.4.4: Propósito do Link (Em Contexto). Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#link-purpose-in-context>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.4.6: Cabeçalhos e Rótulos. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#headings-and-labels>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.4.7: Foco Visível. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#focus-visible>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.4.11: Foco Não Oculto (Mínimo). Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#focus-not-obscured-minimum>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.5.7: Movimentos de Arrastar. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#dragging-movements>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 2.5.8: Tamanho do Alvo (Mínimo). Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#target-size-minimum>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 3.2.4: Identificação Consistente. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#consistent-identification>. Acesso em: 23 jun. 2026.
+
+WORLD WIDE WEB CONSORTIUM. **Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2**. Tradução autorizada. [S.l.]: W3C Brasil, 2023. Seção 4.1.2: Nome, Função, Valor. Disponível em: <https://www.w3c.br/traducoes/wcag/wcag22-pt-BR/#name-role-value>. Acesso em: 23 jun. 2026.
