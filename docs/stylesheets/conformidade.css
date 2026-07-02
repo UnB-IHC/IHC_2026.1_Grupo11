@@ -160,6 +160,15 @@
   color: var(--md-default-fg-color, #333);
 }
 
+.heuristica-check-content {
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.heuristica-check-content a {
+  white-space: nowrap;
+}
+
 .heuristica-checkbox {
   width: 18px;
   height: 18px;
