@@ -1,0 +1,229 @@
+/* conformidade.css
+   Estilo dos itens de checklist com 3 estados e dos anéis de progresso (WCAG),
+   além dos itens de checklist com 1 estado e anéis de progresso (Heurísticas).
+   Os valores de cor usam as variáveis do Material quando disponíveis,
+   com fallback para quando o tema não é o Material. */
+
+/* ==========================================================================
+   Itens de checklist WCAG (3 estados: Conforme / Não conforme / N/A)
+   ========================================================================== */
+
+.a11y-item {
+  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 10px 0;
+}
+
+.a11y-text {
+  margin: 0 0 8px 0;
+}
+
+.a11y-ref {
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light, #666);
+  display: block;
+  margin-top: 2px;
+}
+
+.a11y-states {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.a11y-btn {
+  border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+  background: transparent;
+  color: var(--md-default-fg-color, #333);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85em;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.a11y-btn:hover {
+  border-color: var(--md-accent-fg-color, #1f6feb);
+}
+
+.a11y-btn:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color, #1f6feb);
+  outline-offset: 2px;
+}
+
+.a11y-btn[data-state="conforme"].is-active {
+  background: #2e7d32;
+  border-color: #2e7d32;
+  color: #fff;
+}
+
+.a11y-btn[data-state="nao-conforme"].is-active {
+  background: #c62828;
+  border-color: #c62828;
+  color: #fff;
+}
+
+.a11y-btn[data-state="na"].is-active {
+  background: #757575;
+  border-color: #757575;
+  color: #fff;
+}
+
+.a11y-justificativa {
+  width: 100%;
+  margin-top: 8px;
+  min-height: 50px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 0.9em;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--md-default-fg-color--lighter, #ccc);
+}
+
+/* ==========================================================================
+   Painel e anéis de progresso — WCAG (níveis A, AA, AAA)
+   ========================================================================== */
+
+.a11y-panel {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.a11y-donut {
+  text-align: center;
+}
+
+.a11y-donut-label {
+  font-size: 0.9em;
+  color: var(--md-default-fg-color--light, #666);
+}
+
+.a11y-donut-count {
+  font-size: 0.75em;
+  color: #999;
+}
+
+.a11y-donut-ring {
+  --pct: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(var(--md-accent-fg-color, #1f6feb) calc(var(--pct) * 1%), #e6ecf5 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto;
+  transition: background 0.3s ease;
+}
+
+.a11y-donut-center {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--md-default-bg-color, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: var(--md-default-fg-color, #333);
+}
+
+/* ==========================================================================
+   Itens de checklist Heurísticas (1 estado: checkbox único)
+   ========================================================================== */
+
+.heuristica-item {
+  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.heuristica-item[data-checked="true"] {
+  border-color: #2e7d32;
+  background: color-mix(in srgb, #2e7d32 6%, transparent);
+}
+
+.heuristica-check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: var(--md-default-fg-color, #333);
+}
+
+.heuristica-check-content {
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.heuristica-check-content a {
+  white-space: nowrap;
+}
+
+.heuristica-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--md-primary-fg-color, #1f6feb);
+}
+
+.heuristica-checkbox:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color, #1f6feb);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Painel e anéis de progresso — Heurísticas (1 a 10)
+   ========================================================================== */
+
+.heuristica-donut {
+  text-align: center;
+}
+
+.heuristica-donut-label {
+  font-size: 0.9em;
+  color: var(--md-default-fg-color--light, #666);
+}
+
+.heuristica-donut-count {
+  font-size: 0.75em;
+  color: #999;
+}
+
+.heuristica-donut-ring {
+  --pct: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto;
+  background: conic-gradient(
+    var(--md-primary-fg-color) calc(var(--pct) * 1%),
+    var(--md-default-fg-color--lightest) 0
+  );
+  transition: background 0.3s ease;
+}
+
+.heuristica-donut-center {
+  background: var(--md-default-bg-color);
+  border-radius: 50%;
+  width: 65%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--md-default-fg-color, #333);
+}
